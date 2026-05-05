@@ -114,6 +114,10 @@ button.option:hover{
 .wrong{
     background:#f7c5c5 !important
   }
+.Card-title{
+  text-align: center;
+  margin: 30px 0;
+}
 @media (max-width: 600px){
     #card{
         width:90%;
