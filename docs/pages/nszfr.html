@@ -15,7 +15,329 @@
 </nav>
 
 
+<div id="card">
+<h2 id="question"></h2>
+<div id="options"></div>
+<button id="next" type="button">Tovább</button>
+<button id="again" type="button" style="display:none;">Újra</button>
+</div>
 
+<script>
+const quiz = [
+  {
+    q: "Mi a szoftver egyik alapvető sajátossága?",
+    o: [
+      "Fizikai alkatrészekből áll",
+      "Nem kopik, de módosításokkal romolhat",
+      "Hardverhiba miatt öregszik",
+      "Nem igényel karbantartást"
+    ],
+    a: 1
+  },
+  {
+    q: "Miért beszélünk szoftverkrízisről?",
+    o: [
+      "A hardverek túl gyorsan fejlődtek",
+      "A szoftverek túl olcsók lettek",
+      "A projektek csúsztak és rossz minőségűek voltak",
+      "Nem voltak programozási nyelvek"
+    ],
+    a: 2
+  },
+  {
+    q: "Melyik NEM tartozik a szoftverfejlesztési életciklus fő fázisai közé?",
+    o: [
+      "Követelményfelmérés",
+      "Tervezés",
+      "Marketing",
+      "Tesztelés"
+    ],
+    a: 2
+  },
+  {
+    q: "Melyik folyamatmodell kezeli nehezen a változó követelményeket?",
+    o: [
+      "Agilis modell",
+      "Inkrementális modell",
+      "Vízesés modell",
+      "Spirál modell"
+    ],
+    a: 2
+  },
+  {
+    q: "Mi az agilis szemlélet egyik alapelve?",
+    o: [
+      "Részletes dokumentáció mindenek felett",
+      "Működő szoftver elsődlegessége",
+      "Változások teljes kizárása",
+      "Fejlesztők helyett eszközök előtérbe helyezése"
+    ],
+    a: 1
+  },
+  {
+    q: "Mi a DevOps fő célja?",
+    o: [
+      "Csak a fejlesztési idő növelése",
+      "Fejlesztés és üzemeltetés összehangolása",
+      "Manuális folyamatok preferálása",
+      "Biztonság teljes kizárása"
+    ],
+    a: 1
+  },
+  {
+    q: "Mit jelent a DevSecOps megközelítés?",
+    o: [
+      "Biztonság csak az üzemeltetésben",
+      "Biztonság csak teszteléskor",
+      "Biztonság integrálása a teljes életciklusba",
+      "Biztonság kizárólag külső eszközökkel"
+    ],
+    a: 2
+  },
+  {
+    q: "Mi történik SQL injection támadás során?",
+    o: [
+      "Memória túlcsordul",
+      "Rosszindulatú SQL kód fut le az adatbázison",
+      "Felhasználói felület módosul",
+      "Hálózati csomagok sérülnek"
+    ],
+    a: 1
+  },
+  {
+    q: "Mi az XSS támadás lényege?",
+    o: [
+      "Adatbázis törlése",
+      "Rosszindulatú szkriptek futtatása más felhasználók böngészőjében",
+      "Hálózati forgalom lehallgatása",
+      "Jogosultság-emelés operációs szinten"
+    ],
+    a: 1
+  },
+  {
+    q: "Mi a CSRF támadás célja?",
+    o: [
+      "Felhasználó nevében jogosulatlan művelet végrehajtása",
+      "Memóriahibák kihasználása",
+      "Adatok titkosítása",
+      "Szerver leállítása"
+    ],
+    a: 0
+  },
+  {
+    q: "Melyik sérülékenység jellemző főként alacsony szintű nyelvekre?",
+    o: [
+      "XSS",
+      "CSRF",
+      "Buffer overflow",
+      "SQL injection"
+    ],
+    a: 2
+  },
+  {
+    q: "Mi okozza a buffer overflow sérülékenységet?",
+    o: [
+      "Hibás hitelesítés",
+      "Túl sok adat írása egy memóriaterületre",
+      "Hibás SQL lekérdezés",
+      "Nem megfelelő titkosítás"
+    ],
+    a: 1
+  },
+  {
+    q: "Mit jelent az információszivárgás?",
+    o: [
+      "Adatok törlése",
+      "Érzékeny információk illetéktelen kiszivárgása",
+      "Jogosultságok csökkentése",
+      "Rendszerfrissítés"
+    ],
+    a: 1
+  },
+  {
+    q: "Mi a jogosultság-emelés?",
+    o: [
+      "Felhasználói élmény javítása",
+      "Magasabb jogosultság megszerzése jogosulatlanul",
+      "Adatok titkosítása",
+      "Rendszersebesség növelése"
+    ],
+    a: 1
+  },
+  {
+    q: "Melyik nyilvántartás ad egyedi azonosítót ismert sérülékenységekhez?",
+    o: [
+      "CWE",
+      "CERT",
+      "CVE",
+      "ISO"
+    ],
+    a: 2
+  },
+  {
+    q: "Mit ír le a CWE?",
+    o: [
+      "Konkrét támadási eszközöket",
+      "Általános fejlesztési hibakategóriákat",
+      "Javítási patcheket",
+      "Jogszabályokat"
+    ],
+    a: 1
+  },
+  {
+    q: "Mi a CERT szervezetek fő feladata?",
+    o: [
+      "Szoftverek fejlesztése",
+      "Incidensek kezelése és figyelmeztetések kiadása",
+      "Hardvergyártás",
+      "Jogosultságok kiosztása"
+    ],
+    a: 1
+  },
+  {
+    q: "Mit jelent az IaaS felhőmodell?",
+    o: [
+      "Kész alkalmazás szolgáltatása",
+      "Csak adatbázis biztosítása",
+      "Infrastruktúra szolgáltatása",
+      "Csak fejlesztői környezet"
+    ],
+    a: 2
+  },
+  {
+    q: "Melyik modellben felel leginkább a szolgáltató a biztonságért?",
+    o: [
+      "IaaS",
+      "PaaS",
+      "SaaS",
+      "On-premise"
+    ],
+    a: 2
+  },
+  {
+    q: "Mi a PaaS egyik előnye?",
+    o: [
+      "Teljes kontroll az infrastruktúra felett",
+      "Kevesebb konfigurációs hiba lehetősége",
+      "Nincs szükség alkalmazásfejlesztésre",
+      "Nincs biztonsági kockázat"
+    ],
+    a: 1
+  },
+  {
+    q: "Miért fontos a korai biztonsági szemlélet a fejlesztésben?",
+    o: [
+      "Csak jogi okokból",
+      "Kisebb költséggel javíthatók a hibák",
+      "Nem fontos",
+      "Csak üzemeltetéskor szükséges"
+    ],
+    a: 1
+  },
+  {
+    q: "Mi NEM jellemző az agilis módszertanokra?",
+    o: [
+      "Gyors visszacsatolás",
+      "Rugalmas változáskezelés",
+      "Merev, lineáris folyamat",
+      "Csapatkommunikáció"
+    ],
+    a: 2
+  },
+  {
+    q: "Mi a szoftverminőség egyik kulcsa nagy rendszereknél?",
+    o: [
+      "Minél több funkció",
+      "Folyamatok és biztonság összehangolása",
+      "Dokumentáció hiánya",
+      "Manuális üzemeltetés"
+    ],
+    a: 1
+  },
+  {
+    q: "Miért segíti a CVE a biztonsági kommunikációt?",
+    o: [
+      "Automatikusan javít hibákat",
+      "Egységes azonosítót ad sérülékenységeknek",
+      "Kódelemzést végez",
+      "Titkosítja az adatokat"
+    ],
+    a: 1
+  }
+];
+let i=0;
+const qEl=document.getElementById('question');
+const oEl=document.getElementById('options');
+const next=document.getElementById('next');
+var db=0;
+var count = quiz.length;
+let order = [];
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+order = quiz.map((_, idx) => idx);
+shuffle(order);
+
+function load() {
+  next.disabled = true;
+  oEl.innerHTML = '';
+
+  const qIndex = order[i];
+  const qData = quiz[qIndex];
+
+  if (!qData) return;
+
+  qEl.textContent = qData.q;
+
+  qData.o.forEach((text, idx) => {
+    const b = document.createElement('button');
+    b.textContent = text;
+    b.className = 'option';
+    b.type = 'button';
+    b.onclick = () => select(b, idx, qData.a);
+    oEl.appendChild(b);
+  });
+}
+function select(btn,idx,correct){
+ const buttons=[...document.querySelectorAll('.option')];
+ buttons.forEach(b=>b.disabled=true);
+ if(idx===correct)
+ {
+  btn.classList.add('correct');
+  db++;
+ }
+ else
+ {
+  btn.classList.add('wrong');
+  buttons[quiz[i].a].classList.add('correct');
+  }
+ next.disabled=false;
+}
+again.onclick = () => {
+  i=0;
+  db=0;
+  load();
+  next.style.display = 'block';
+  document.getElementById('again').style.display = 'none';
+}
+next.onclick = () => {
+  i++;
+
+  if (i < quiz.length) {
+    load();
+  } else {
+    qEl.textContent = '🎉 Kész!';
+    oEl.innerHTML = '✅ Helyes válaszok: ' + db + '/' + count;
+    next.style.display = 'none';
+    document.getElementById('again').style.display = 'block';
+  }
+};
+load();
+</script>
 
 </body>
 </html>
