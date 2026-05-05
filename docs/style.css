@@ -109,6 +109,18 @@ button.option:hover{
 #next:disabled{
     background:#aaa}
 .correct{
-    background:#c8f7c5 !important}
+    background:#c8f7c5 !important
+  }
 .wrong{
-    background:#f7c5c5 !important}
+    background:#f7c5c5 !important
+  }
+@media (max-width: 600px){
+    #card{
+        width:90%;
+        padding:20px
+    }
+    .button.option{
+        font-size:30px;
+        padding:8px
+    }
+}
