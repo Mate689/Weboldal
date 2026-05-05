@@ -127,6 +127,7 @@ button.option:hover{
     }
     .button.option{
         font-size:30px;
-        padding:8px
+        padding:8px;
+        color:black;
     }
 }
