@@ -82,6 +82,7 @@ button.option{
     padding:10px;
     border-radius:6px;
     border:1px solid #ccc;
+    color:black;
     background:#fff;
     cursor:pointer}
 button.option:hover{
