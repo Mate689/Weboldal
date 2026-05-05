@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 body{
   margin:0;
   font-family:Arial;
@@ -19,28 +22,51 @@ body{
   margin-left:15px;
   font-weight:bold;
 }
-
+.title{
+  text-align: center;
+  font-size: 32px;
+  margin: 30px 0;
+}
 /* GRID */
 .container{
-  padding:30px;
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:20px;
+  padding: 40px;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, 280px);
+  justify-content: center;
+  gap: 25px;
+
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .card{
-  background:white;
+  background: white;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  width: 20vh;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-  cursor:pointer;
-  transition:0.2s;
+  justify-content: space-between;
+  min-width: 150px;
+  min-height: 180px;
+  padding: 20px;
+  font-size: 2ch;
+  border-radius: 10px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card p{
+  margin-top: auto; /* EZ A TRÜKK */
+  color: #555;
+}
+.card:hover{
+  transform: scale(1.03);
 }
 
-.card:hover{
-  transform:scale(1.03);
+@media (max-width: 600px){
+  .container{
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
 }
