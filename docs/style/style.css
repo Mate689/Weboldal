@@ -63,6 +63,7 @@ body{
 }
 #card{
     margin: 50px auto;
+    font-size:2ch;
     background:white;
     padding:30px;
     width:520px;

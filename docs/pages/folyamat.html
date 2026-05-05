@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tárgyak</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
 <nav class="navbar">
@@ -14,7 +14,23 @@
     <a href="../class.html">🏠 Tárgyak</a>
   </div>
 </nav>
+<div class="Card-title">
+  <h1>Folyamatmenedzsment</h1>
+  <h3>20.db Kvíz kérdés</h3>
+</div>
 
+<div id="card">
+<h2 id="question"></h2>
+<div id="options"></div>
+<button id="next" type="button">Tovább</button>
+<button id="again" type="button" style="display:none;">Újra</button>
+</div>
+
+<script src="../js/folyamat.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  initQuiz(quizArray);
+</script>
 
 
 
