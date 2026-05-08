@@ -17,7 +17,7 @@
 
 <div class="Card-title">
   <h1>Szociológia</h1>
-  <h3>20.db Kvíz kérdés</h3>
+  <h3 id="quizCount"></h3>
 </div>
 
 <div id="card">
@@ -30,6 +30,7 @@
 <script src="../js/szoc.js"></script>
 <script src="../js/main.js"></script>
 <script>
+  document.getElementById('quizCount').textContent = quizArray.length + " kérdés";
   initQuiz(quizArray);
 </script>
 
