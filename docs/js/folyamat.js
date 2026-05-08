@@ -63,7 +63,7 @@ const quizArray = [
   {
     q: "Mi a javítás (repair) célja?",
     o: [
-      "A nemmegfelelőség okának megszüntetése",
+      "A nem megfelelőség okának megszüntetése",
       "A nem megfelelő termék elfogadhatóvá tétele",
       "A lehetséges hiba megelőzése",
       "A folyamat újratervezése"
