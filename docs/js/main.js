@@ -32,38 +32,62 @@ function shuffle(array){
 function load(){
   next.disabled = true;
   oEl.innerHTML = '';
+  clearExplanation();
 
   const qIndex = order[i];
   const qData = questions[qIndex];
 
-  qEl.textContent = qData.q;
+  if(qData.type === 'fill'){
+    qEl.innerHTML = qData.q.replace(/___/g, '<span class="blank">___</span>');
+  } else {
+    qEl.textContent = qData.q;
+  }
 
   qData.o.forEach((text, idx) => {
     const b = document.createElement('button');
     b.textContent = text;
     b.className = 'option';
 
-    b.onclick = () => select(b, idx, qData.a);
+    b.onclick = () => select(b, idx, qData);
 
     oEl.appendChild(b);
   });
 }
 
-function select(btn, idx, correct){
+function select(btn, idx, qData){
   const buttons = [...document.querySelectorAll('.option')];
 
   buttons.forEach(b => b.disabled = true);
 
-  if(idx === correct){
+  if(idx === qData.a){
     btn.classList.add('correct');
     db++;
   } else {
     btn.classList.add('wrong');
-
-    buttons[correct].classList.add('correct');
+    buttons[qData.a].classList.add('correct');
+    showExplanation(qData);
   }
 
   next.disabled = false;
+}
+
+function showExplanation(qData){
+  const div = document.createElement('div');
+  div.id = 'explanation';
+
+  let html = `<strong>Helyes válasz:</strong> ${qData.o[qData.a]}`;
+
+  if(qData.explanation){
+    html += `<br><span>${qData.explanation}</span>`;
+  }
+
+  div.innerHTML = html;
+  oEl.after(div);
+}
+
+function clearExplanation(){
+  const existing = document.getElementById('explanation');
+  if(existing) existing.remove();
 }
 
 next.onclick = () => {
@@ -74,6 +98,7 @@ next.onclick = () => {
   } else {
     qEl.textContent = '🎉 Kész!';
     oEl.innerHTML = `✅ Helyes válaszok: ${db}/${questions.length}`;
+    clearExplanation();
 
     next.style.display = 'none';
     again.style.display = 'block';
