@@ -661,5 +661,1168 @@ const quizArray = [
     o: ["függően", "párhuzamosan", "függetlenül", "sorban"],
     a: 2,
     explanation: "A microservice architektúra egyik fő előnye, hogy az egyes szolgáltatások egymástól függetlenül fejleszthetők, skálázhatók és deployolhatók."
-  }
+  },
+
+  // ─────────────────────────────────────────────
+  // EVO-SOFT kérdések
+  // KONFIGURÁCIÓKEZELÉS
+  // ─────────────────────────────────────────────
+
+{
+  q: "Mi a konfiguráció definíciója?",
+  o: [
+    "Konfigurációs elemek gyűjteménye egy projekt állapotáról",
+    "Csak a forráskód aktuális verziója",
+    "Tesztesetek összessége",
+    "A fejlesztők listája"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A konfigurációkezelés célja a ___ fejlesztési környezet biztosítása.",
+  o: ["kaotikus", "ellenőrzött", "offline", "manuális"],
+  a: 1,
+  explanation: "A konfigurációkezelés egyik fő célja az ellenőrzött fejlesztési környezet biztosítása."
+},
+
+{
+  q: "Melyik NEM konfigurációs elem?",
+  o: [
+    "Forráskód",
+    "Dokumentáció",
+    "Fejlesztői környezet",
+    "Felhasználó kedvenc színe"
+  ],
+  a: 3
+},
+
+{
+  type: "fill",
+  q: "A Git ___ paranccsal küldjük fel a módosításokat a központi repository-ba.",
+  o: ["clone", "checkout", "push", "pull"],
+  a: 2,
+  explanation: "A git push parancs küldi fel a lokális commitokat a távoli repository-ba."
+},
+
+{
+  q: "Mi a branch szerepe?",
+  o: [
+    "Párhuzamos fejlesztés biztosítása",
+    "Adatbázis törlése",
+    "Tesztelés kikapcsolása",
+    "Felhasználók kezelése"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A ___ művelet során két fejlesztési ág változásait egyesítjük.",
+  o: ["clone", "merge", "commit", "reset"],
+  a: 1,
+  explanation: "A merge művelet különböző branchek összeolvasztását végzi."
+},
+
+{
+  q: "Mit jelent a commit?",
+  o: [
+    "Változások rögzítése a verziókezelőben",
+    "Projekt törlése",
+    "Szerver újraindítása",
+    "Teszt leállítása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A Git ___ paranccsal kérdezhető le a repository állapota.",
+  o: ["status", "push", "merge", "branch"],
+  a: 0,
+  explanation: "A git status mutatja az aktuális módosításokat és állapotot."
+},
+
+{
+  q: "Mi a baseline?",
+  o: [
+    "Rögzített referencia állapot",
+    "Tesztelési hibajegy",
+    "Automatikus build",
+    "Felhasználói kézikönyv"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A verziókövetés válaszol arra, hogy ki, mikor és ___ változtatott.",
+  o: ["hol", "mit", "miért", "mennyit"],
+  a: 1,
+  explanation: "A verziókövetés egyik alap kérdése: ki, mikor és mit módosított."
+},
+
+{
+  q: "Mi a repository?",
+  o: [
+    "Tároló a verziózott elemek számára",
+    "Tesztkörnyezet",
+    "Virtuális gép",
+    "Hálózati protokoll"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A staging area egy ___ tároló commit előtt.",
+  o: ["végleges", "köztes", "külső", "titkos"],
+  a: 1,
+  explanation: "A staging area köztes tárolóként működik commit előtt."
+},
+
+{
+  q: "Mi a konfigurációkezelés egyik előnye?",
+  o: [
+    "Reprodukálható build",
+    "Lassabb fejlesztés",
+    "Kevesebb dokumentáció",
+    "Több manuális munka"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A ___ biztosítja a párhuzamos fejlesztést verzióütközés nélkül.",
+  o: ["branch", "tag", "commit", "release"],
+  a: 0,
+  explanation: "A branch lehetővé teszi a párhuzamos fejlesztést."
+},
+
+{
+  q: "Mit jelent a checkout?",
+  o: [
+    "Egy adott verzió lekérése",
+    "Projekt törlése",
+    "Teszt futtatása",
+    "Szerver leállítása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A ___ segítségével címkézhetünk egy adott verziót.",
+  o: ["branch", "tag", "clone", "fork"],
+  a: 1,
+  explanation: "A tag vagy label egy konkrét verzió megjelölésére szolgál."
+},
+
+{
+  q: "Mi a merge konfliktus?",
+  o: [
+    "Két módosítás ütközése",
+    "Szerver hiba",
+    "Tesztelési hiba",
+    "Build siker"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A Git ___ paranccsal tölthetjük le a repository másolatát.",
+  o: ["push", "clone", "merge", "status"],
+  a: 1,
+  explanation: "A git clone a repository teljes másolatát letölti."
+},
+
+{
+  q: "Melyik rendszer verziókezelő?",
+  o: [
+    "Git",
+    "Docker",
+    "Jenkins",
+    "Kubernetes"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A konfigurációkezelés támogatja a ___ fejlesztést.",
+  o: ["kaotikus", "reprodukálható", "véletlenszerű", "manuális"],
+  a: 1,
+  explanation: "A konfigurációkezelés reprodukálható fejlesztést biztosít."
+},
+
+// ─────────────────────────────────────────────
+// RIZIKÓ ALAPÚ TESZTELÉS
+// ─────────────────────────────────────────────
+
+{
+  q: "Mi a klasszikus tesztelés egyik problémája?",
+  o: [
+    "Túl későn történik a tesztelés",
+    "Túl gyors visszacsatolás",
+    "Nincs dokumentáció",
+    "Kevés fejlesztő"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A Risk Based Testing a ___ fókuszál a tesztesetek helyett.",
+  o: ["felhasználókra", "rizikókra", "szerverekre", "adatbázisokra"],
+  a: 1,
+  explanation: "A rizikó alapú tesztelés középpontjában a kockázatok állnak."
+},
+
+{
+  q: "Mi a kihatás képlete?",
+  o: [
+    "Valószínűség × Kár",
+    "Sebesség × Idő",
+    "Teszt × Build",
+    "Sprint × User Story"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A rizikó analízis során meghatározzuk a valószínűséget és a ___.",
+  o: ["költséget", "kárt", "branch-et", "buildet"],
+  a: 1,
+  explanation: "A kihatás a valószínűség és a kár szorzata."
+},
+
+{
+  q: "Mi a rizikó alapú tesztelés célja?",
+  o: [
+    "A legkritikusabb hibák megtalálása",
+    "Minden teszt törlése",
+    "Dokumentáció csökkentése",
+    "Fejlesztés leállítása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A rizikó azonosítás során a potenciális ___ gyűjtjük össze.",
+  o: ["hibákat", "meetingeket", "fejlesztőket", "release-eket"],
+  a: 0,
+  explanation: "A rizikó azonosítás során a lehetséges problémákat keressük."
+},
+
+{
+  q: "Mit jelent a teszt hatékonyság?",
+  o: [
+    "Mennyire csökkenti a teszt a kockázatot",
+    "Milyen gyors a szerver",
+    "Mennyi RAM van",
+    "Hány fejlesztő dolgozik"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A rizikó alapú tesztelés jól illeszkedik a ___ módszertanhoz.",
+  o: ["Agile", "Waterfall", "Lineáris", "Statikus"],
+  a: 0,
+  explanation: "Az RBT jól működik Agile és Scrum környezetben."
+},
+
+{
+  q: "Miért rossz a klasszikus tesztelés?",
+  o: [
+    "Későn derülnek ki a kritikus hibák",
+    "Túl gyors",
+    "Nincs szükség tesztekre",
+    "Mindig automatizált"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A teszt prioritását a ___ határozza meg.",
+  o: ["szín", "rizikó", "kódhossz", "meeting"],
+  a: 1,
+  explanation: "A magasabb rizikójú funkciók magasabb prioritást kapnak."
+},
+
+{
+  q: "Mi a Scrum egyik előnye RBT esetén?",
+  o: [
+    "Gyors visszacsatolás",
+    "Nincs tesztelés",
+    "Nincs iteráció",
+    "Kevesebb kommunikáció"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A magas valószínűségű és nagy kárt okozó hibák ___ prioritást kapnak.",
+  o: ["alacsony", "magas", "közepes", "véletlen"],
+  a: 1,
+  explanation: "A magas kockázatú hibákat priorizálni kell."
+},
+
+{
+  q: "Mi a rizikó alapú tesztelés egyik előnye?",
+  o: [
+    "Hatékonyabb erőforrás felhasználás",
+    "Több felesleges teszt",
+    "Lassabb hibajavítás",
+    "Kevesebb automatizáció"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A sprint elején gyakran tartanak ___ meetinget.",
+  o: ["release", "RBT", "backup", "shutdown"],
+  a: 1,
+  explanation: "Az RBT meeting során priorizálják a kockázatokat."
+},
+
+{
+  q: "Mi történik a teszt tervezési fázisban?",
+  o: [
+    "Tesztszintek és felelősök kijelölése",
+    "Projekt törlése",
+    "Adatbázis újratelepítése",
+    "Felhasználók regisztrálása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A kihatás a valószínűség és a ___ szorzata.",
+  o: ["sebesség", "kár", "teszt", "release"],
+  a: 1,
+  explanation: "A risk impact számítása: probability × damage."
+},
+
+{
+  q: "Mi az RBT egyik legfontosabb előnye?",
+  o: [
+    "A kritikus területekre koncentrál",
+    "Minden tesztet töröl",
+    "Megszünteti az Agile-t",
+    "Nem igényel dokumentációt"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "Az RBT során a rizikókat gyakran ___ alapján rangsorolják.",
+  o: ["prioritás", "szín", "időjárás", "képernyőméret"],
+  a: 0,
+  explanation: "A rizikókat prioritás szerint rendezik."
+},
+
+{
+  q: "Mi történik az ellenőrzés és döntés fázisban?",
+  o: [
+    "Közös döntés születik a kockázatokról",
+    "Szerver telepítés",
+    "Kód törlés",
+    "Repository klónozás"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A rizikó alapú tesztelés során a legfontosabb cél a ___ csökkentése.",
+  o: ["kockázat", "RAM", "branch", "pipeline"],
+  a: 0,
+  explanation: "Az RBT elsődleges célja a kockázatok minimalizálása."
+},
+// ─────────────────────────────────────────────
+// DOMAIN MODELL
+// ─────────────────────────────────────────────
+
+{
+  q: "Mi a modell definíciója?",
+  o: [
+    "Egy rendszer egyszerűsítése konkrét cél érdekében",
+    "Adatbázis szerver",
+    "Programozási nyelv",
+    "Tesztelési módszer"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A domain modell segít a rendszerrel kapcsolatos ___ megválaszolásában.",
+  o: ["kérdések", "hibák", "tesztek", "branch-ek"],
+  a: 0,
+  explanation: "A modell célja a rendszerrel kapcsolatos kérdések megválaszolása."
+},
+
+{
+  q: "Mit jelent a CRUD rövidítésben a C betű?",
+  o: [
+    "Create",
+    "Compile",
+    "Check",
+    "Configure"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A CQRS különválasztja az adatlekérdezést és az adat ___.",
+  o: ["másolást", "módosítást", "törlést", "szinkronizálást"],
+  a: 1,
+  explanation: "A CQRS külön kezeli a Query és Command műveleteket."
+},
+
+{
+  q: "Mi a CRUD egyik hátránya nagy rendszereknél?",
+  o: [
+    "Nehéz skálázhatóság",
+    "Túl gyors működés",
+    "Nincs adatkezelés",
+    "Nincs UI"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A CQRS-ben a Query az adat ___ felel.",
+  o: ["módosításáért", "lekérdezéséért", "titkosításáért", "törléséért"],
+  a: 1,
+  explanation: "A Query az adatok lekérdezésére szolgál."
+},
+
+{
+  q: "Miért fontos a domain modell?",
+  o: [
+    "Közös megértést biztosít",
+    "Lecseréli a tesztelést",
+    "Megszünteti az adatbázist",
+    "Automatikusan javít hibákat"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A klasszikus fejlesztés egyik problémája az analízis ___.",
+  o: ["parallelizmus", "paralízis", "pipeline", "branch"],
+  a: 1,
+  explanation: "Az analízis paralízis a túlzott tervezésből ered."
+},
+
+{
+  q: "Mit jelent a refaktorálás?",
+  o: [
+    "Kód átszervezése működésváltozás nélkül",
+    "Adatbázis törlése",
+    "Tesztelés kikapcsolása",
+    "Új szerver telepítése"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A domain-driven design központjában a ___ áll.",
+  o: ["üzleti domain", "szerver", "pipeline", "UI"],
+  a: 0,
+  explanation: "A DDD az üzleti problémák modellezésére koncentrál."
+},
+
+{
+  q: "Mi a CQRS egyik előnye?",
+  o: [
+    "Jobb skálázhatóság",
+    "Kevesebb adat",
+    "Nincs tesztelés",
+    "Egyszerűbb hardware"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A CRUD műveletek az adatok ___ szolgálnak.",
+  o: ["kezelésére", "titkosítására", "másolására", "tömörítésére"],
+  a: 0,
+  explanation: "A CRUD az alap adatkezelési műveleteket jelenti."
+},
+
+{
+  q: "Mi a túlzott tervezés egyik veszélye?",
+  o: [
+    "Merev rendszer kialakulása",
+    "Gyorsabb fejlesztés",
+    "Kevesebb dokumentáció",
+    "Egyszerűbb karbantartás"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A startupok gyakran ___ fejlesztési megközelítést alkalmaznak.",
+  o: ["tervmentes", "vízesés", "lineáris", "monolitikus"],
+  a: 0,
+  explanation: "A startupok gyakran gyors, kevésbé tervezett módszerekkel dolgoznak."
+},
+
+{
+  q: "Mi lehet a terv nélküli fejlesztés következménye?",
+  o: [
+    "Kaotikus rendszer",
+    "Tökéletes architektúra",
+    "Nincs technikai adósság",
+    "Kevesebb hiba"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A CQRS-ben a Command az adatok ___ végzi.",
+  o: ["lekérdezését", "módosítását", "másolását", "exportálását"],
+  a: 1,
+  explanation: "A Command műveletek módosítják az adatokat."
+},
+
+{
+  q: "Mi a domain modell egyik célja?",
+  o: [
+    "A rendszer komplexitásának csökkentése",
+    "Adatok törlése",
+    "Pipeline leállítása",
+    "Felhasználók blokkolása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A domain modell egy rendszer ___ reprezentációja.",
+  o: ["egyszerűsített", "titkos", "hardveres", "fizikai"],
+  a: 0,
+  explanation: "A modell mindig egyszerűsített reprezentáció."
+},
+
+{
+  q: "Miért nehéz a túl komplex rendszer?",
+  o: [
+    "Nehezen bővíthető és karbantartható",
+    "Gyorsabb lesz",
+    "Egyszerűbb tesztelni",
+    "Kevesebb hibát tartalmaz"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A domain modellezés segíti a csapatok közötti ___.",
+  o: ["kommunikációt", "konfliktust", "késést", "leállást"],
+  a: 0,
+  explanation: "A domain modell közös nyelvet biztosít a csapatoknak."
+},
+
+// ─────────────────────────────────────────────
+// TESZTELÉS IPARI KÖRNYEZETBEN
+// ─────────────────────────────────────────────
+
+{
+  q: "Miért kritikus az ipari szoftverek tesztelése?",
+  o: [
+    "A hibák komoly károkat okozhatnak",
+    "Mert nincs felhasználó",
+    "Mert nincs dokumentáció",
+    "Mert nincs UI"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "Az ipari rendszerekben különösen fontos a ___ működés.",
+  o: ["instabil", "megbízható", "lassú", "offline"],
+  a: 1,
+  explanation: "Az ipari rendszereknél kiemelten fontos a megbízhatóság."
+},
+
+{
+  q: "Mit jelent a DevOps?",
+  o: [
+    "Fejlesztés és üzemeltetés együttműködése",
+    "Adatbázis mentés",
+    "Tesztek törlése",
+    "UI fejlesztés"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A DevSecOps a DevOps és a ___ kombinációja.",
+  o: ["security", "marketing", "hardver", "UI"],
+  a: 0,
+  explanation: "A DevSecOps biztonsági szemlélettel egészíti ki a DevOpsot."
+},
+
+{
+  q: "Mi a folyamatos integráció célja?",
+  o: [
+    "Integrációs problémák korai felismerése",
+    "Tesztek törlése",
+    "Pipeline leállítása",
+    "Adatok titkosítása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A CI rövidítés jelentése Continuous ___.",
+  o: ["Integration", "Inspection", "Iteration", "Infrastructure"],
+  a: 0,
+  explanation: "A CI jelentése Continuous Integration."
+},
+
+{
+  q: "Mi a monitorozás egyik célja?",
+  o: [
+    "Hibák és teljesítményproblémák felismerése",
+    "Tesztek kikapcsolása",
+    "Adatbázis törlése",
+    "Felhasználók blokkolása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "Az E2E teszt jelentése End-to-End ___.",
+  o: ["testing", "tracking", "transfer", "timeout"],
+  a: 0,
+  explanation: "Az End-to-End teszt a teljes folyamatot vizsgálja."
+},
+
+{
+  q: "Mi a self-healing rendszer jellemzője?",
+  o: [
+    "Automatikus helyreállítás",
+    "Kézi hibajavítás",
+    "Tesztelés tiltása",
+    "Szerver törlése"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A magas rendelkezésre állást gyakran ___ rövidítéssel jelölik.",
+  o: ["CI", "HA", "CD", "RBT"],
+  a: 1,
+  explanation: "A HA a High Availability rövidítése."
+},
+
+{
+  q: "Mi az automatizált tesztelés előnye?",
+  o: [
+    "Gyors és ismételhető tesztfuttatás",
+    "Lassabb fejlesztés",
+    "Több manuális munka",
+    "Kevesebb reprodukálhatóság"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A CD jelentése Continuous ___.",
+  o: ["Deployment", "Database", "Documentation", "Debug"],
+  a: 0,
+  explanation: "A CD a Continuous Deployment rövidítése."
+},
+
+{
+  q: "Mi a vulnerability management célja?",
+  o: [
+    "Sérülékenységek kezelése",
+    "Felhasználók törlése",
+    "Pipeline gyorsítása",
+    "UI fejlesztés"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A DevSecOps fontos része a ___ ellenőrzés.",
+  o: ["biztonsági", "grafikai", "hang", "videó"],
+  a: 0,
+  explanation: "A DevSecOps egyik fő eleme a security ellenőrzés."
+},
+
+{
+  q: "Mi az auto-scaling?",
+  o: [
+    "Automatikus erőforrás skálázás",
+    "Automatikus teszt törlés",
+    "UI generálás",
+    "Adatbázis mentés"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "Az ipari rendszerekben kiemelten fontos a ___ és stabilitás.",
+  o: ["biztonság", "színvilág", "marketing", "animáció"],
+  a: 0,
+  explanation: "A biztonság és stabilitás alapkövetelmény."
+},
+
+{
+  q: "Mi a CI/CD pipeline célja?",
+  o: [
+    "Folyamatos fejlesztés és szállítás",
+    "Felhasználók tiltása",
+    "Tesztek eltávolítása",
+    "Dokumentáció törlése"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A passzív monitorozás figyeli a rendszer ___ állapotát.",
+  o: ["aktuális", "jövőbeli", "titkos", "offline"],
+  a: 0,
+  explanation: "A passzív monitorozás a rendszer működését figyeli."
+},
+
+{
+  q: "Miért fontos az integrációs teszt?",
+  o: [
+    "Komponensek együttműködését ellenőrzi",
+    "Csak UI-t tesztel",
+    "Nem automatizálható",
+    "Csak adatbázist vizsgál"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A DevOps egyik fő előnye a gyorsabb ___.",
+  o: ["visszacsatolás", "hibaszám", "leállás", "manuális munka"],
+  a: 0,
+  explanation: "A DevOps gyors feedback ciklusokat biztosít."
+},
+// ─────────────────────────────────────────────
+// RENDSZERINTEGRÁCIÓ – SAFe vs LeSS
+// ─────────────────────────────────────────────
+
+{
+  q: "Mit jelent a SAFe rövidítés?",
+  o: [
+    "Scaled Agile Framework",
+    "System Agile Function",
+    "Secure Architecture Framework",
+    "Software Agile Flow"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A LeSS a ___ Scrum rövidítése.",
+  o: ["Large Scale", "Long System", "Linear Software", "Layered Secure"],
+  a: 0,
+  explanation: "A LeSS jelentése Large Scale Scrum."
+},
+
+{
+  q: "Melyik jellemző igaz a SAFe-re?",
+  o: [
+    "Hierarchikus felépítés",
+    "Nincs koordináció",
+    "Csak egy csapat használhatja",
+    "Nem támogatja az Agile-t"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A SAFe egyik fontos eleme a Program ___.",
+  o: ["Iteration", "Increment", "Integration", "Inspection"],
+  a: 1,
+  explanation: "A Program Increment (PI) a SAFe egyik alapfogalma."
+},
+
+{
+  q: "Mi a LeSS egyik előnye?",
+  o: [
+    "Egyszerűbb és kevésbé bürokratikus",
+    "Sok extra szerepkör",
+    "Komplexebb működés",
+    "Nincs Scrum"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A SAFe elsősorban ___ vállalatok számára készült.",
+  o: ["kis", "nagy", "startup", "egyfős"],
+  a: 1,
+  explanation: "A SAFe nagyvállalati környezetre optimalizált."
+},
+
+{
+  q: "Mi a Release Train célja?",
+  o: [
+    "Csapatok összehangolt működése",
+    "Adatbázis törlése",
+    "Tesztelés leállítása",
+    "UI tervezés"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A LeSS a ___ alapelveire épül.",
+  o: ["Scrum", "Waterfall", "V-modell", "Spirál"],
+  a: 0,
+  explanation: "A LeSS a Scrum egyszerű kiterjesztése nagyobb rendszerekre."
+},
+
+{
+  q: "Mi a SAFe egyik hátránya?",
+  o: [
+    "Nagy komplexitás és adminisztráció",
+    "Nincs dokumentáció",
+    "Nem skálázható",
+    "Kevés szerepkör"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A SAFe erős ___ biztosít a csapatok között.",
+  o: ["koordinációt", "elszigetelést", "titkosítást", "tesztelést"],
+  a: 0,
+  explanation: "A SAFe egyik fő célja a nagy csapatok koordinálása."
+},
+
+{
+  q: "Mi a LeSS egyik jellemzője?",
+  o: [
+    "Kevés extra szerepkör",
+    "Sok hierarchia",
+    "Nincs Product Owner",
+    "Nem Agile"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A SAFe több ___ szintet használ.",
+  o: ["szervezeti", "hardveres", "grafikai", "titkos"],
+  a: 0,
+  explanation: "A SAFe több szervezeti szinten működik."
+},
+
+{
+  q: "Mi a közös a SAFe és LeSS modellekben?",
+  o: [
+    "Agile alapú skálázott fejlesztés",
+    "Csak vízesés modell használata",
+    "Nincs Scrum",
+    "Nem támogatják az iterációkat"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A LeSS célja az Agile ___ megtartása nagy rendszerekben.",
+  o: ["egyszerűség", "hierarchia", "bürokrácia", "merevség"],
+  a: 0,
+  explanation: "A LeSS az egyszerű Scrum szemléletet próbálja megőrizni."
+},
+
+{
+  q: "Miért használják a skálázott Agile modelleket?",
+  o: [
+    "Sok csapat koordinálására",
+    "Adatbázis kezelésre",
+    "Operációs rendszer fejlesztésre",
+    "UI animációkra"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A PI Planning a SAFe egyik közös ___ eseménye.",
+  o: ["tervezési", "tesztelési", "monitorozási", "backup"],
+  a: 0,
+  explanation: "A PI Planning közös tervezési esemény."
+},
+
+{
+  q: "Melyik modell egyszerűbb?",
+  o: [
+    "LeSS",
+    "SAFe",
+    "Mindkettő egyforma",
+    "Egyik sem"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A SAFe nagy hangsúlyt fektet a ___ kezelésére.",
+  o: ["függőségek", "színek", "grafikák", "animációk"],
+  a: 0,
+  explanation: "A SAFe koordinálja a csapatok közti függőségeket."
+},
+
+{
+  q: "Mi a LeSS egyik hátránya?",
+  o: [
+    "Nagyon nagy szervezeteknél nehezebb koordináció",
+    "Nincs Scrum támogatás",
+    "Túl sok szerepkör",
+    "Nem iteratív"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A SAFe támogatja a nagyvállalati ___ működést.",
+  o: ["agilis", "lineáris", "offline", "manuális"],
+  a: 0,
+  explanation: "A SAFe célja a skálázott agilis működés támogatása."
+},
+
+// ─────────────────────────────────────────────
+// SZISZTEMATIKUS ARCHITEKTÚRA-TERVEZÉS
+// ─────────────────────────────────────────────
+
+{
+  q: "Mi a szisztematikus architektúra-tervezés célja?",
+  o: [
+    "Fenntartható és bővíthető rendszer kialakítása",
+    "Tesztek törlése",
+    "UI színezése",
+    "Felhasználók blokkolása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A jó architektúra támogatja a rendszer ___ lehetőségét.",
+  o: ["változtatását", "törlését", "titkosítását", "leállítását"],
+  a: 0,
+  explanation: "A jó architektúra könnyen módosítható és bővíthető."
+},
+
+{
+  q: "Mi az analízis paralízis?",
+  o: [
+    "Túl sok tervezés miatti lelassulás",
+    "Gyors fejlesztés",
+    "Tesztelési módszer",
+    "Adatbázis hiba"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A technikai adósság hosszú távon ___ problémákat okoz.",
+  o: ["karbantartási", "grafikai", "szín", "animációs"],
+  a: 0,
+  explanation: "A technikai adósság rontja a rendszer karbantarthatóságát."
+},
+
+{
+  q: "Mi a modularitás előnye?",
+  o: [
+    "Könnyebb karbantartás és bővíthetőség",
+    "Nagyobb káosz",
+    "Lassabb fejlesztés",
+    "Több duplikáció"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "Az iteratív fejlesztés folyamatos ___ biztosít.",
+  o: ["visszacsatolást", "hibát", "késést", "törlést"],
+  a: 0,
+  explanation: "Az iteratív fejlesztés gyors feedback ciklusokat ad."
+},
+
+{
+  q: "Mi a túl kevés tervezés következménye?",
+  o: [
+    "Kaotikus architektúra",
+    "Tökéletes rendszer",
+    "Nincs technikai adósság",
+    "Egyszerűbb karbantartás"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A túl sok upfront design gyakran ___ paralízist okoz.",
+  o: ["analízis", "pipeline", "security", "integration"],
+  a: 0,
+  explanation: "A túlzott upfront tervezés analízis paralízishez vezethet."
+},
+
+{
+  q: "Mi a skálázhatóság?",
+  o: [
+    "A rendszer növekvő terhelés kezelési képessége",
+    "UI színezés",
+    "Tesztek törlése",
+    "Branch kezelés"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A maintainability jelentése rendszer ___.",
+  o: ["karbantarthatóság", "titkosítás", "törlés", "telepítés"],
+  a: 0,
+  explanation: "A maintainability a rendszer karbantarthatóságát jelenti."
+},
+
+{
+  q: "Mi a CI/CD szerepe az architektúrában?",
+  o: [
+    "Folyamatos integráció és szállítás támogatása",
+    "Felhasználók törlése",
+    "UI tervezés",
+    "Hardver hűtés"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A domain-driven design az üzleti ___ modellezésére koncentrál.",
+  o: ["problémák", "animációk", "grafikák", "színek"],
+  a: 0,
+  explanation: "A DDD az üzleti problémákra épül."
+},
+
+{
+  q: "Miért fontos a jó architektúra?",
+  o: [
+    "Hosszú távon fenntartható rendszert biztosít",
+    "Megszünteti a tesztelést",
+    "Lassítja a fejlesztést",
+    "Növeli a káoszt"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A monolitikus rendszerek gyakran nehezen ___.",
+  o: ["skálázhatók", "telepíthetők", "fordíthatók", "indíthatók"],
+  a: 0,
+  explanation: "A monolitikus rendszerek skálázása nehézkes lehet."
+},
+
+{
+  q: "Mi a refaktorálás célja?",
+  o: [
+    "Kódminőség javítása működésváltozás nélkül",
+    "Tesztelés kikapcsolása",
+    "Felhasználók törlése",
+    "Pipeline leállítása"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "Az architektúra egyik fő célja a rendszer ___ növelése.",
+  o: ["stabilitásának", "hibáinak", "késésének", "káoszának"],
+  a: 0,
+  explanation: "A jó architektúra stabilabb rendszert eredményez."
+},
+
+{
+  q: "Mi az egyik modern architektúra-tervezési megközelítés?",
+  o: [
+    "Agile",
+    "Csak Waterfall",
+    "Papíralapú fejlesztés",
+    "Teszt nélküli fejlesztés"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A continuous integration célja az integrációs hibák ___ felismerése.",
+  o: ["korai", "késői", "véletlen", "manuális"],
+  a: 0,
+  explanation: "A CI egyik fő előnye a korai hibafelismerés."
+},
+
+{
+  q: "Mi a bővíthetőség jelentése?",
+  o: [
+    "A rendszer könnyen fejleszthető tovább",
+    "A rendszer törölhető",
+    "A rendszer nem módosítható",
+    "A rendszer offline működik"
+  ],
+  a: 0
+},
+
+{
+  type: "fill",
+  q: "A szisztematikus architektúra-tervezés célja a ___ rendszer kialakítása.",
+  o: ["fenntartható", "kaotikus", "véletlenszerű", "instabil"],
+  a: 0,
+  explanation: "Az architektúrának hosszú távon fenntarthatónak kell lennie."
+}
 ]
