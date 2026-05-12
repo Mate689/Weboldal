@@ -217,6 +217,70 @@ button.option:disabled {
   transform: none;
 }
 
+/* ── Question counter ── */
+.q-counter {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* ── Results screen ── */
+.score {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 4px 0 18px;
+}
+
+.score.perfect { color: var(--success); }
+.score.good    { color: #facc15; }
+
+#wrong-list {
+  margin-top: 4px;
+}
+
+.wrong-list-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--error);
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.wrong-item {
+  margin-bottom: 12px;
+  padding: 11px 14px;
+  background: rgba(239, 68, 68, 0.06);
+  border-left: 3px solid var(--error);
+  border-radius: 8px;
+}
+
+.wi-question {
+  margin: 0 0 5px;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.wi-answer {
+  margin: 0 0 4px;
+  color: #86efac;
+  font-size: 0.88rem;
+}
+
+.wi-explanation {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
 /* ── Fill-in-the-blank ── */
 .blank {
   display: inline-block;

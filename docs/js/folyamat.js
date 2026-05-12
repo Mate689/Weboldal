@@ -99,5 +99,56 @@ const quizArray = [
       "A folyamatok dokumentálása"
     ],
     a: 2
+  },
+
+  // ── Hiányzó szó kérdések ──
+  {
+    type: "fill",
+    q: "A folyamatgazda az a ___ személy, aki felelős az üzleti folyamat működéséért.",
+    o: ["önkéntes", "külső", "névtelen", "felhatalmazott"],
+    a: 3,
+    explanation: "A folyamatgazda egy konkrét, felhatalmazott személy — nem a teljes szervezet —, aki felelős a folyamat méréséért, fejlesztéséért és a célok eléréséért."
+  },
+  {
+    type: "fill",
+    q: "A PDCA ciklus négy lépése: Plan, Do, ___, Act.",
+    o: ["Create", "Change", "Control", "Check"],
+    a: 3,
+    explanation: "A PDCA (Deming-kör): Tervezés (Plan) → Végrehajtás (Do) → Ellenőrzés (Check) → Beavatkozás (Act). Folyamatos fejlesztési eszköz, amelyet újra és újra kell futtatni."
+  },
+  {
+    type: "fill",
+    q: "A Pareto-elv szerint az okok ___%-a felelős a hibák 80%-áért.",
+    o: ["50", "30", "10", "20"],
+    a: 3,
+    explanation: "A 80/20 szabály: az eredmények 80%-át az okok mindössze 20%-a generálja. Ez segít a legfontosabb problémákra összpontosítani, ahelyett hogy minden hibát egyenlő súllyal kezelnénk."
+  },
+  {
+    type: "fill",
+    q: "Az Ishikawa-diagramot ___ diagramnak is hívják jellegzetes alakja miatt.",
+    o: ["Pareto", "PDCA", "halszálka", "folyamat"],
+    a: 2,
+    explanation: "Az Ishikawa (halszálka / cause-and-effect) diagram vizuálisan ábrázolja egy probléma lehetséges okait kategóriánként: ember, anyag, módszer, gép, mérés, környezet."
+  },
+  {
+    type: "fill",
+    q: "A TQM (Total Quality Management) elsődleges célja a folyamatos ___ elégedettség elérése.",
+    o: ["dolgozói", "részvényesi", "menedzsment", "vevői"],
+    a: 3,
+    explanation: "A TQM alapköve a vevőközpontúság: minden döntésnek és fejlesztésnek a vevői elégedettség növelését kell céloznia, mivel a vevő ítéli meg végső soron a minőséget."
+  },
+  {
+    type: "fill",
+    q: "A BPM életciklus helyes sorrendje: Tervezés – ___ – Végrehajtás – Monitoring – Optimalizálás.",
+    o: ["Ellenőrzés", "Implementálás", "Dokumentálás", "Modellezés"],
+    a: 3,
+    explanation: "A BPM életciklusa: Tervezés → Modellezés → Végrehajtás → Monitoring → Optimalizálás → (vissza a tervezéshez). A modellezés a folyamat szimulálása és tesztelése végrehajtás előtt."
+  },
+  {
+    type: "fill",
+    q: "A PDCA ___ lépése a javított megoldás standardizálásáról és teljes bevezetéséről szól.",
+    o: ["Plan", "Do", "Check", "Act"],
+    a: 3,
+    explanation: "Az Act (Beavatkozás) lépésben a Check tapasztalatai alapján standardizálják és teljes körűen bevezetik a fejlesztett megoldást, majd a ciklus újraindul."
   }
 ]
