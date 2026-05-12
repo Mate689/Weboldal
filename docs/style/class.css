@@ -1,71 +1,98 @@
-*{
+/* ===== CYBER BLUE THEME ===== */
+* {
   box-sizing: border-box;
 }
-body{
-  margin:0;
-  font-family:Arial;
-  background:#f4f6f8;
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0F1117;
+  color: #F3F4F6;
+  min-height: 100vh;
 }
 
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 25px;
-  background:#0078d4;
-  color:white;
+/* ── Navbar ── */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 28px;
+  background: #1A1F2B;
+  border-bottom: 1px solid #2A3142;
+  box-shadow: 0 1px 20px rgba(79, 140, 255, 0.08);
 }
 
-.navbar a{
-  color:white;
-  text-decoration:none;
-  margin-left:15px;
-  font-weight:bold;
+.navbar a {
+  color: #F3F4F6;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: 600;
+  transition: color 0.2s;
 }
-.title{
+
+.navbar a:hover {
+  color: #4F8CFF;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #4F8CFF;
+  letter-spacing: 0.5px;
+}
+
+/* ── Page title ── */
+.title {
   text-align: center;
-  font-size: 32px;
-  margin: 30px 0;
+  font-size: 2rem;
+  margin: 44px 0 10px;
+  color: #F3F4F6;
 }
-/* GRID */
-.container{
-  padding: 40px;
-  display: grid;
 
+/* ── Subject grid ── */
+.container {
+  padding: 30px 40px 60px;
+  display: grid;
   grid-template-columns: repeat(auto-fit, 280px);
   justify-content: center;
-  gap: 25px;
-
+  gap: 22px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
-.card{
-  background: white;
+.card {
+  background: #1A1F2B;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 150px;
   min-height: 180px;
-  padding: 20px;
-  font-size: 2ch;
-  border-radius: 10px;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-
+  padding: 22px;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: 1px solid #2A3142;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  transition: 0.2s;
-}
-.card p{
-  margin-top: auto; 
-  color: #555;
-}
-.card:hover{
-  transform: scale(1.03);
+  text-decoration: none;
+  color: #F3F4F6;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
-@media (max-width: 600px){
-  .container{
+.card p {
+  margin-top: auto;
+  color: #9CA3AF;
+  font-size: 0.9rem;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #4F8CFF;
+  box-shadow: 0 8px 28px rgba(79, 140, 255, 0.25);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .container {
     grid-template-columns: 1fr;
     padding: 15px;
   }
